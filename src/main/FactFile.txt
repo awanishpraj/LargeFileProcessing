@@ -1,0 +1,12 @@
+BufferedInputStream and the FileChannel are the optimal and most efficient ways to read and write very large files in Java IO
+They offer excellent control to optimise the large file handling in Java. For more on Java, please visit
+
+
+server.database.1 = file:/C:/Users/Admin/IdeaProjects/LargeFileOperation/src/main/resources/hsqldb/eventdb
+server.dbname.1 = logeventdb
+
+java -classpath lib/hsqldb.jar org.hsqldb.server.Server --database.1 file:/C:/Users/Admin/IdeaProjects/LargeFileOperation/src/main/resources/hsqldb/eventdb --dbname.1 logeventdb
+
+jdbc:hsqldb:file:/C:/Users/Admin/IdeaProjects/LargeFileOperation/src/main/resources/hsqldb/eventdb
+
+jdbc:hsqldb:file:/C:/Users/Admin/IdeaProjects/LargeFileOperation/src/main/resources/hsqldb/eventdb;hsqldb.lock_file=false

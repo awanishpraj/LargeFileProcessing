@@ -1,0 +1,5 @@
+
+ Event id : scsmbstgra  ||  Event Duration : 5  ||  Type : APPLICATION LOG  ||  Host : 12345
+ Event id : scsmbstgrc  ||  Event Duration : 8  ||  Type :   ||  Host : 
+ Event id : scsmbstgrd  ||  Event Duration : 6  ||  Type :   ||  Host : 
+ Event id : scsmbstgrf  ||  Event Duration : 8  ||  Type :   ||  Host : 
