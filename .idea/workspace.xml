@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae11a32-504e-4bc9-951c-eb2bc30084c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/FactFile.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/FileAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/alertData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hsqldb/eventdb/logeventdb.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hsqldb/eventdb/logeventdb.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hsqldb/eventdb/logeventdb.script" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/FileAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/FileAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,37 +114,37 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>89</line>
+          <line>71</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>82</line>
+          <line>69</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>67</line>
+          <line>54</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>74</line>
+          <line>61</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>81</line>
+          <line>68</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>108</line>
+          <line>90</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/DataBaseUtil.java</url>
-          <line>66</line>
+          <line>53</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>

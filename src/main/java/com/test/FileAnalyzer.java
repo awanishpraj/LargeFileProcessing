@@ -86,15 +86,11 @@ public class FileAnalyzer {
         try (Stream linesStream = Files.lines(file.toPath())) {
             linesStream.forEach(line -> {
 
-                //System.out.println(line);
-
                 try {
                     jsonResponse[0] = (JSONObject)parser.parse(line.toString());
-                    //logger.info(jsonResponse[0].toString());
-                   // System.out.println(jsonResponse[0].get("id")+" :: "+ jsonResponse[0].get("state") +" :: "+ jsonResponse[0].get("timestamp")+" :: "+ (jsonResponse[0].containsKey("host") ? jsonResponse[0].get("host"): "") +" :: "+ (jsonResponse[0].containsKey("type") ? jsonResponse[0].get("type") : ""));
                     /**Add event id in the outerMap if it is NOT present in it. If present, that means START or its FINISHED event id is already read
                      * and stored in the outerMap. Now we need to find the difference of timestamp of both and this is done in the else condition
-                    */
+                     */
                     if (dataMap.get(jsonResponse[0].get("id").toString()) == null) {
                         final Map<String, String>[] innerData = new HashMap[1];
                         innerData[0] = new HashMap<>();
@@ -110,8 +106,8 @@ public class FileAnalyzer {
                          * Calculate the duration to finish the event
                          * Insert the event data in the table
                          */
-                        //System.out.println(Timestamp.valueOf(dataMap.get(jsonResponse[0].get("id").toString()).get(FieldsToExtract.timestamp.toString())));
 
+                        //NOTE:- Here we can do these two tasks [insertEventQuery(), alert()] can performs in two parallel Executor in different thread
                         if(jsonResponse[0].get("state").toString().equalsIgnoreCase("STARTED")){
                             Long duration = getDuration(dataMap.get(jsonResponse[0].get("id").toString()).get(FieldsToExtract.timestamp.toString()), jsonResponse[0].get("timestamp").toString(),dataMap, jsonResponse);
                             insertEventQuery(new String[]{jsonResponse[0].get("id").toString(), String.valueOf(duration), (jsonResponse[0].get("type") != null) ? jsonResponse[0].get("type").toString() : "", (jsonResponse[0].get("host") != null) ? jsonResponse[0].get("host").toString() : ""});
@@ -125,10 +121,8 @@ public class FileAnalyzer {
                             removeMapData(dataMap, jsonResponse);
                         } else {
                             Long duration = getDuration(jsonResponse[0].get("timestamp").toString(), dataMap.get(jsonResponse[0].get("id").toString()).get(FieldsToExtract.timestamp.toString()),dataMap, jsonResponse);
-                            //String[] strA = new String[]{jsonResponse[0].get("id").toString(), String.valueOf(duration), (jsonResponse[0].get("type") != null) ? jsonResponse[0].get("type").toString() : "", (jsonResponse[0].get("host") != null) ? jsonResponse[0].get("host").toString() : ""};
-                            insertEventQuery(new String[]{jsonResponse[0].get("id").toString(), String.valueOf(duration), (jsonResponse[0].get("type") != null) ? jsonResponse[0].get("type").toString() : "", (jsonResponse[0].get("host") != null) ? jsonResponse[0].get("host").toString() : ""});
-                            //insertEventQuery(strA);
-                            if (duration >= 4) {
+                             insertEventQuery(new String[]{jsonResponse[0].get("id").toString(), String.valueOf(duration), (jsonResponse[0].get("type") != null) ? jsonResponse[0].get("type").toString() : "", (jsonResponse[0].get("host") != null) ? jsonResponse[0].get("host").toString() : ""});
+                             if (duration >= 4) {
                                 alert(alertFile, dataMap, jsonResponse, duration);
                             }
 

@@ -48,19 +48,6 @@ class DataBaseUtil {
             try {
                 con = getDBConnection();
 
-//                DatabaseMetaData databaseMetaData = con.getMetaData();
-//                ResultSet resultSet = databaseMetaData.getTables(null, null, null, new String[] {"EVENT_TBL"});
-//                boolean isTableExists = false;
-//                while (resultSet.next()) {
-//                    String name = resultSet.getString("TABLE_NAME");
-//                    if (name.equalsIgnoreCase("event_tbl ")){
-//                        isTableExists = true;
-//                        logger.info("Event table named {} already exists, so skipping table creation..." , result);
-//                        break;
-//                    }
-//
-//                }
-
                 boolean isTableExists = false;
                 DatabaseMetaData meta = con.getMetaData();
                 ResultSet res = meta.getTables(null, null, "EVENT_TBL",  new String[] {"TABLE"});
@@ -81,12 +68,7 @@ class DataBaseUtil {
 
                 if (!isTableExists) {
                     stmt = con.createStatement();
-                    //result = stmt.executeUpdate("DROP TABLE PUBLIC.EVENT_TBL");
-                    //result = stmt.executeUpdate(dropTable);
-//                    logger.info("Event table dropped : {}" , result);
-//                    result = 0;
                     result = stmt.executeUpdate(createTblStr);
-
                     logger.info("Event table created : {}" , result);
                 }
 
